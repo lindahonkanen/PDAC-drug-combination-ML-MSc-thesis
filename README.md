@@ -1,4 +1,4 @@
-This is the corresponding repository to my Master's thesis from University of Helsinki, titled "Machine learning for drug-combination modelling in pancreatic ductal adenocarcinoma" and submitted on xx.11.2026. You may access my thesis from the open-source University of Helsinki Library (link).
+This is the corresponding repository to my Master's thesis from University of Helsinki, titled _Machine learning for drug-combination modelling in pancreatic ductal adenocarcinoma_ and submitted on xx.11.2026. You may access my thesis from the open-source University of Helsinki Library (link).
 
 - Inside the **notebooks** file, there are Jupyter notebooks containing all the algorithms used for the thesis analyses, including single-cell-line benchmarking, multi-cell-line modelling, drug combination prioritisation and testing the models on external experimental evidence.
 
