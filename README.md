@@ -133,3 +133,22 @@ Exact sources used from other studies (accessed October 2026):
 - Höfer et al. (2025), doi: 10.1038/s44320-025-00085-6	hoefer_2025_Dataset_EV2.xlsx	Sheet Dataset EV2_146Drugs_Synergy; supplied Synergy labels and AUC∆_sum [%]. HPDE is excluded.
 - Vis et al. (2024), doi: 10.1016/j.xcrm.2024.101687	pancan_combi_fitted_data_jan21.tsv.gz from publication Data S1	Pancreatic rows and continuous SYNERGY_DELTA_EMAX. No binary labels are constructed.
 - Bashi et al. (2024), doi: 10.1158/2159-8290.CD-23-0388	cd-23-0388_table_s18_suppst18.xlsx	Sheet Supplementary Table 18 Single; combo_MaxE, HSA_matrix and drug/cell-line identities. The notebook constructs the original analysis's binary response rule.
+
+## Computational environment
+
+The Python dependencies and their recorded versions are listed in
+[requirements.txt](requirements.txt).
+
+The Python version, operating system, installation instructions,
+package versions and reproducibility considerations are documented
+in [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md).
+
+The environment specification was generated from the author's
+thesis-analysis Python environment. Package imports were verified,
+but this does not constitute a complete fresh-environment rerun
+of every notebook.
+
+Original experimental and molecular datasets are not redistributed.
+See [Data access and preprocessing](docs/DATA_ACCESS_AND_PREPROCESSING.md)
+for source access and preprocessing instructions.
+
