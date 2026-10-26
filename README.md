@@ -4,7 +4,38 @@ This is the corresponding repository to my Master's thesis from University of He
 
 - Inside the **notebooks** file, there are Jupyter notebooks containing all the algorithms used for the thesis analyses, including single-cell-line benchmarking, multi-cell-line modelling, drug combination prioritisation and testing the models on external experimental evidence.
 
-- Inside the **tables** file, there are the canonical unit-level table and the depmap gene expression table, which are both requirements to have to run the multi_cell_line_grouped_validation notebook.
+- The **tables/** directory contains the published derived candidate-support table. Larger source-derived modelling inputs are kept locally and are not redistributed in this repository.
+
+### Required local input files
+
+The notebooks use local data paths relative to the repository root.
+The following files are required for the corresponding analyses:
+
+| Notebook | Required local input |
+|---|---|
+| `NCATS_PANC1_single_cell_line_benchmark.ipynb` | `data/raw/NCATS_PANC1/Training_set.csv` |
+| `multi_cell_line_grouped_validation.ipynb` | `tables/pdac_multicell_drug_pair_units_with_morgan.csv` |
+| `multi_cell_line_grouped_validation.ipynb` | `tables/depmap_pdac_full_expression_for_fold_pca.csv` |
+
+The PANC-1 training set is available in the original
+[NCATS/PANC1 repository](https://github.com/ncats/PANC1)
+under `datasets/Training_set.csv` (Pourmousa et al., 2025).
+
+The multi-cell-line inputs are derived from the Jaaks/GDSC
+drug-combination screen and DepMap Public 26Q1 expression data.
+The required canonical unit table contains 8,450 observations
+from 26 cell lines and 325 drug pairs. The expression table
+contains the corresponding 26 PDAC cell lines and 19,216
+gene-expression features.
+
+These two larger datasets are intentionally excluded from
+public Git tracking. Their preparation requires the
+data-assembly and feature-construction workflow; downloading
+the raw source files alone is not sufficient.
+
+Files under `data/raw/` and the two specified modelling CSVs
+are listed in `.gitignore`. They must be supplied locally
+before executing the relevant notebooks.
 
 ### External experimental validation
 
