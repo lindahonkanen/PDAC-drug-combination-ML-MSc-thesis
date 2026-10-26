@@ -104,7 +104,7 @@ Download the original study data manually and edit the path variables in the **f
 | Bashi | `data/raw/Bashi_2024/cd-23-0388_table_s18_suppst18.xlsx` (sheet `Supplementary Table 18 Single`) | [Bashi et al. (2024)](https://doi.org/10.1158/2159-8290.CD-23-0388) |
 | NCATS/PANC-1 | The same `Training_set.csv` used by the PANC-1 benchmark | [NCATS/PANC1](https://github.com/ncats/PANC1) |
 
-**Keep downloaded Vis and other external files out of Git.** The example Vis input location is under `data/external/`, which is not covered by the current `.gitignore`. Before saving source files there, add `/data/external/` to `.gitignore`, or store the file under the ignored `data/raw/` directory and update `VIS_TSV_PATH`.
+**Keep downloaded Vis and other external files out of Git.** The example Vis input location is under `data/external/`, which is already excluded by `.gitignore`. Alternatively, store the file under the ignored `data/raw/` directory and update `VIS_TSV_PATH` accordingly.
 
 The harmonisation notebook writes an **external source contract** to `results/tables/ml_comprehensive/external_dataset_harmonisation/external_source_harmonisation_contract.csv` and the four source-specific pair tables under `results/tables/ml_comprehensive/`.
 
