@@ -33,6 +33,12 @@ public Git tracking. Their preparation requires the
 data-assembly and feature-construction workflow; downloading
 the raw source files alone is not sufficient.
 
+For source access, licence caveats, documented preprocessing
+steps, expected validation counts and remaining provenance
+gaps, see [Data access and preprocessing](docs/DATA_ACCESS_AND_PREPROCESSING.md).
+This guide is a processing specification; the original full
+data-assembly pipeline is not included in this repository.
+
 Files under `data/raw/` and the two specified modelling CSVs
 are listed in `.gitignore`. They must be supplied locally
 before executing the relevant notebooks.
