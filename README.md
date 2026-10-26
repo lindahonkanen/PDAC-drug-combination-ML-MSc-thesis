@@ -25,8 +25,8 @@ The multi-cell-line inputs are derived from the Jaaks/GDSC
 drug-combination screen and DepMap Public 26Q1 expression data.
 The required canonical unit table contains 8,450 observations
 from 26 cell lines and 325 drug pairs. The expression table
-contains the corresponding 26 PDAC cell lines and 19,216
-gene-expression features.
+contains the corresponding 26 PDAC cell lines and 19,215
+gene-expression features (19,216 CSV columns including ModelID).
 
 These two larger datasets are intentionally excluded from
 public Git tracking. Their preparation requires the
@@ -36,12 +36,22 @@ the raw source files alone is not sufficient.
 For source access, licence caveats, documented preprocessing
 steps, expected validation counts and remaining provenance
 gaps, see [Data access and preprocessing](docs/DATA_ACCESS_AND_PREPROCESSING.md).
-This guide is a processing specification; the original full
-data-assembly pipeline is not included in this repository.
+The two-stage assembly workflow is provided in
+`notebooks/multi_cell_line_dataset.ipynb`. Original source
+datasets must still be downloaded and supplied locally.
 
 Files under `data/raw/` and the two specified modelling CSVs
 are listed in `.gitignore`. They must be supplied locally
 before executing the relevant notebooks.
+
+### Multi-cell-line dataset assembly
+
+The notebook `notebooks/multi_cell_line_dataset.ipynb`
+reconstructs the Jaaks/GDSC?DepMap dataset, aggregates the
+8,450 canonical modelling units and generates Morgan fingerprints.
+It also exports the two local CSV inputs required by the
+multi-cell-line modelling notebooks. Original source files
+remain excluded from GitHub.
 
 ### External experimental validation
 

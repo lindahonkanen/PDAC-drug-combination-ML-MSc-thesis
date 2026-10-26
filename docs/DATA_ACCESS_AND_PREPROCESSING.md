@@ -9,7 +9,7 @@
 The public repository contains code, documentation, and the small attributed `tables/candidate_pair_secondary_support.csv` summary; it does **not** distribute:
 
 - `tables/pdac_multicell_drug_pair_units_with_morgan.csv` — integrated Jaaks/GDSC–DepMap/DrugComb modelling table (8,450 units);
-- `tables/depmap_pdac_full_expression_for_fold_pca.csv` — a 26-cell-line subset of DepMap Public 26Q1 expression (19,216 harmonised gene columns).
+- `tables/depmap_pdac_full_expression_for_fold_pca.csv` — a 26-cell-line subset of DepMap Public 26Q1 expression (19,215 harmonised gene columns (19,216 CSV columns including ModelID)).
 
 These files are expected to be supplied **locally**. They are expressly ignored in `.gitignore`. The raw downloads in `data/raw/` and generated outputs in `results/` are also ignored. No repository licence conveys a right to redistribute third-party source datasets.
 
@@ -46,6 +46,7 @@ tables/
   pdac_multicell_drug_pair_units_with_morgan.csv  # LOCAL ONLY
   depmap_pdac_full_expression_for_fold_pca.csv    # LOCAL ONLY
 notebooks/
+  multi_cell_line_dataset.ipynb
   multi_cell_line_grouped_validation.ipynb
   drug_pair_candidate_ranking.ipynb
   external_pdac_dataset_harmonisation.ipynb
@@ -53,6 +54,11 @@ notebooks/
 ```
 
 `notebooks/multi_cell_line_grouped_validation.ipynb` uses both local CSVs. `notebooks/drug_pair_candidate_ranking.ipynb` uses the canonical unit table and the published secondary-support table. The external validation notebook may additionally require the locally prepared harmonisation contract, study-specific source tables, source-backed SMILES files, and its own canonical-training path setting; see its configuration cell. This document does not claim that a fresh clone already contains those additional local inputs.
+
+The complete two-stage assembly implementation is available in
+[multi_cell_line_dataset.ipynb](../notebooks/multi_cell_line_dataset.ipynb).
+It has been executed against the author's local source files;
+reproduction elsewhere requires matching source downloads.
 
 ## 4. Documented preprocessing specification
 
@@ -93,10 +99,10 @@ Group the retained concentration-level measurements by (`ModelID`, canonical uno
 1. Download the **matching Public 26Q1** expression and cell-model metadata directly from DepMap; save filenames, checksums and terms.
 2. Join using the **same 26 exact `ModelID` values** retained in the canonical screening table. Use the original default/representative-profile selection when multiple profiles exist.
 3. Harmonise the original gene feature names; collapse duplicate gene columns and duplicate `ModelID` rows by averaging, as reported in the thesis.
-4. Validate a matrix with **26 distinct `ModelID` rows × 19,216 gene-expression columns**, excluding identifier/metadata columns. Save locally to `tables/depmap_pdac_full_expression_for_fold_pca.csv`.
+4. Validate a matrix with **26 distinct `ModelID` rows × 19,215 gene-expression columns**, excluding identifier/metadata columns. Save locally to `tables/depmap_pdac_full_expression_for_fold_pca.csv`.
 5. Do **not** globally fit expression PCA before an **unseen-cell-line** evaluation. That notebook fits training-only expression preprocessing (training-based gene filtering and scaling, then up to 20 PCs). Its training SD threshold is **0.05**, with unused component slots zero-padded where needed. For unseen-*drug-pair* analyses, the separately stored 20-component expression-PCA scores are used because all cell lines are represented in training.
 
-The public notebook validates the expression shape and column consistency; it does **not** generate the whole expression file from the raw DepMap download.
+The grouped-validation notebook validates the expression shape and column consistency. The assembly notebook generates the expression file from locally supplied DepMap source data.
 
 ### 4.5 Assemble the final local unit-table input
 
@@ -151,7 +157,7 @@ The two large tables were removed from **current `main`**, but GitHub commit his
 
 ## 7. What remains to reach exact computational reproducibility
 
-This repository currently lacks the complete public data-assembly pipeline. To convert this protocol into a fully executable recipe, add or link to the actual original preparation scripts/notebooks, plus:
+The executable data-assembly pipeline is now provided in `notebooks/multi_cell_line_dataset.ipynb`; exact independent reconstruction still requires the matching original source releases. To convert this protocol into a fully executable recipe, add or link to the actual original preparation scripts/notebooks, plus:
 
 - exact source release/file names and SHA-256 values;
 - 26 `ModelID` values and source cell-line crosswalk;

@@ -1,4 +1,4 @@
-﻿# Local source-derived datasets
+# Local source-derived datasets
 /tables/depmap_pdac_full_expression_for_fold_pca.csv
 /tables/pdac_multicell_drug_pair_units_with_morgan.csv
 
@@ -22,3 +22,6 @@ __pycache__/
 # Operating-system files
 .DS_Store
 Thumbs.db
+
+# Local dataset assembly intermediates
+/data/processed/dataset_assembly/
