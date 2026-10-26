@@ -60,3 +60,6 @@ secrets/
 # Only publish the approved candidate-support table
 /tables/*
 !/tables/candidate_pair_secondary_support.csv
+
+# Original external experimental datasets
+/data/external/
