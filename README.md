@@ -58,7 +58,7 @@ before executing the relevant notebooks.
 ### Multi-cell-line dataset assembly
 
 The notebook `notebooks/multi_cell_line_dataset.ipynb`
-reconstructs the Jaaks/GDSC?DepMap dataset, aggregates the
+reconstructs the Jaaks/GDSC--DepMap dataset, aggregates the
 8,450 canonical modelling units and generates Morgan fingerprints.
 It also exports the two local CSV inputs required by the
 multi-cell-line modelling notebooks. Original source files
