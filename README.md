@@ -4,6 +4,17 @@ This is the corresponding repository to my Master's thesis from University of He
 
 - Inside the **notebooks** file, there are Jupyter notebooks containing all the algorithms used for the thesis analyses, including single-cell-line benchmarking, multi-cell-line modelling, drug combination prioritisation and testing the models on external experimental evidence.
 
+## Analysis notebooks
+
+| Stage | Notebook | Analysis |
+|---|---|---|
+| 1 | [NCATS/PANC-1 benchmark](notebooks/NCATS_PANC1_single_cell_line_benchmark.ipynb) | Published model reproduction and feature comparisons |
+| 2 | [Dataset assembly](notebooks/multi_cell_line_dataset.ipynb) | Jaaks/GDSC–DepMap integration and feature construction |
+| 3 | [Multi-cell-line modelling](notebooks/multi_cell_line_grouped_validation.ipynb) | Grouped validation, model comparisons and cold-drug testing |
+| 4 | [Candidate prioritisation](notebooks/drug_pair_candidate_ranking.ipynb) | Three-model consensus, ranking and quantitative support |
+| 5 | [External data harmonisation](notebooks/external_pdac_dataset_harmonisation.ipynb) | Preparation of independent experimental datasets |
+| 6 | [External validation](notebooks/external_experimental_validation.ipynb) | Prediction transfer and chemical generalisation |
+
 - The **tables/** directory contains the published derived candidate-support table. Larger source-derived modelling inputs are kept locally and are not redistributed in this repository.
 
 ### Required local input files
