@@ -25,3 +25,38 @@ Thumbs.db
 
 # Local dataset assembly intermediates
 /data/processed/dataset_assembly/
+
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+.secrets/
+secrets/
+
+# Editor settings and additional temporary files
+.vscode/
+.idea/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Keep unpublished processed datasets local
+/data/processed/*
+!/data/processed/external_validation/
+/data/processed/external_validation/*
+!/data/processed/external_validation/external_approved_smiles.csv
+
+# Only publish the approved candidate-support table
+/tables/*
+!/tables/candidate_pair_secondary_support.csv
