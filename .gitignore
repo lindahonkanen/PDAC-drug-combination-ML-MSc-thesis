@@ -1,0 +1,24 @@
+﻿# Local source-derived datasets
+/tables/depmap_pdac_full_expression_for_fold_pca.csv
+/tables/pdac_multicell_drug_pair_units_with_morgan.csv
+
+# Local data and generated results
+/data/raw/
+/results/
+/notebooks/results/
+/notebooks/data/
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local saved models and intermediate caches
+*.pkl
+*.pickle
+*.joblib
+
+# Operating-system files
+.DS_Store
+Thumbs.db
