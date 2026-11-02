@@ -42,20 +42,7 @@ The notebooks are published with selected saved execution results. Generated loc
 
 ## Installation
 
-The documented analysis environment is **Python 3.14.3 on Windows 11**, with a CPU-based PyTorch installation at the time of environment capture. See [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md) for the full recorded versions and limitations. [`requirements.txt`](requirements.txt) pins the installed direct notebook dependencies (including RDKit, scikit-learn, PyTorch, LightGBM, CatBoost and XGBoost); it is not a complete transitive lockfile or evidence of a clean-room rerun.
-
-From **Windows PowerShell**:
-
-```powershell
-git clone https://github.com/lindahonkanen/PDAC-drug-combination-ML-MSc-thesis.git
-Set-Location .\PDAC-drug-combination-ML-MSc-thesis
-py -3.14 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python -m pip check
-python -m ipykernel install --user --name pdac-thesis --display-name "PDAC thesis"
-jupyter lab
-```
+The documented analysis environment is Python 3.14.3 on Windows 11, with a CPU-based PyTorch installation at the time of environment capture. See [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md) for the full recorded versions and limitations. [`requirements.txt`](requirements.txt) pins the installed direct notebook dependencies (including RDKit, scikit-learn, PyTorch, LightGBM, CatBoost and XGBoost); it is not a complete transitive lockfile or evidence of a clean-room rerun.
 
 Open notebooks from within this repository and select the **PDAC thesis** kernel. Most notebooks locate the repository root from the current working directory; if you launch a notebook elsewhere, configure its project-root override where provided. Do not run from an unrelated directory. On macOS/Linux, use a compatible Python interpreter, `python -m venv .venv` and `source .venv/bin/activate` instead of the Windows activation command. RDKit and PyTorch wheel availability may differ by platform; use the instructions in [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md) if installation requires adaptation.
 
