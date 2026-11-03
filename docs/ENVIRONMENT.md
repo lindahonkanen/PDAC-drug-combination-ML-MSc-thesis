@@ -56,7 +56,6 @@ specified in `requirements.txt`. The `rdkit` name refers to the modern PyPI pack
 ## Scope and limitations
 
 - `requirements.txt` lists pinned direct packages, not every transitive dependency.
-- The script checked that the required modules and RDKit Avalon extension import.
 - Version capture and import checks do **not** establish byte-for-byte reproduction
   of the fitted models; rerun the notebooks and validate their frozen audit counts
   and performance outputs to establish end-to-end reproducibility.
