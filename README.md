@@ -30,8 +30,6 @@ The principal analyses are:
 │   ├── drug_pair_candidate_ranking.ipynb
 │   ├── external_pdac_dataset_harmonisation.ipynb
 │   └── external_experimental_validation.ipynb
-├── scripts/
-│   └── capture_thesis_environment.py
 ├── tables/
 │   └── candidate_pair_secondary_support.csv
 └── data/processed/external_validation/
