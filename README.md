@@ -175,6 +175,5 @@ For details on source licences, original-versus-processed files, known reconstru
 - Full reconstruction requires the matching original Jaaks/GDSC, DrugComb and DepMap source releases, mapping/identifier decisions and chemical structures. Source retrieval alone does not guarantee identical processed tables.
 - The external experimental workflow depends on original study files and several separately sourced molecular-structure lookups; missing or ambiguous compounds are excluded rather than guessed.
 - The fixed random seeds and frozen expected counts facilitate checks but cannot replace actual source- and output-level verification.
-- Candidate rankings and external agreement are computational research findings, **not clinically validated treatment recommendations**.
 
-For package versions, installation caveats and the environment-capture method, see [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md) and [`scripts/capture_thesis_environment.py`](scripts/capture_thesis_environment.py).
+For package versions, installation instructions and environment limitations, see docs/ENVIRONMENT.md.
