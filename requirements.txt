@@ -1,8 +1,4 @@
-# PDAC thesis computational dependencies
-# Generated 2026-10-26 15:15 UTC using the Python environment selected by the user.
-# Direct notebook/runtime dependencies are pinned to installed versions.
-# Python version and platform are recorded in docs/ENVIRONMENT.md.
-# This is NOT a complete transitive lockfile or an end-to-end execution test.
+# Python 3.14.3, Windows 11 (CPU)
 
 numpy==2.4.4
 pandas==2.3.3
@@ -18,6 +14,4 @@ openpyxl==3.1.5
 ipython==9.13.0
 ipykernel==7.2.0
 nbformat==5.10.4
-
-# Optional components present in the captured environment
 jupyterlab==4.5.7
