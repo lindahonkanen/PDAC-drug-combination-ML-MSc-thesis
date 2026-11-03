@@ -6,9 +6,9 @@ This repository contains the Python notebooks for my master's thesis on machine-
 
 ## Setup
 
-The analyses were developed using **Python 3.14.3 on Windows 11**. The required Python packages are listed in [`requirements.txt`](requirements.txt), with additional environment information in [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md).
+The analyses were developed using Python 3.14.3 on Windows 11 (CPU). The required Python packages and their versions are listed in requirements.txt.
 
-Install the dependencies, open the notebooks in Jupyter or VS Code, and run them using the configured Python environment. Check the input paths in each notebook before execution.
+Install the dependencies in your preferred Python environment and open the notebooks in Jupyter or VS Code. Check the input paths in each notebook before running.
 
 ## Notebooks
 
