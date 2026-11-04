@@ -15,9 +15,7 @@ This guide lists the datasets required for the PDAC thesis notebooks and how to 
 | Vis | [Vis et al., 2024](https://doi.org/10.1016/j.xcrm.2024.101687) | `pancan_combi_fitted_data_jan21.tsv.gz` (Data S1) |
 | Bashi | [Bashi et al., 2024](https://doi.org/10.1158/2159-8290.CD-23-0388) | `cd-23-0388_table_s18_suppst18.xlsx` |
 
-Download the required files into `data/raw/` and check the input paths in each notebook's configuration cell. The notebooks do not download the original data automatically.
-
-Use the corresponding source releases and verify the relevant data-usage terms before redistributing any original or derived files.
+Download the required files into `data/raw/` and check the input paths in each notebook's configuration cell. The notebooks do not download the original data automatically. Use the corresponding source releases and verify the relevant data-usage terms before redistributing any original or derived files.
 
 ## Preparing the modelling inputs
 
@@ -30,7 +28,7 @@ tables/depmap_pdac_full_expression_for_fold_pca.csv
 
 These files are required for the multi-cell-line analyses and are excluded from Git.
 
-The dataset assembly should reproduce **8,450 canonical cell-line–drug-pair units** across 26 PDAC cell lines and 325 unordered drug pairs. Additional dataset checks are included in the notebook.
+The dataset assembly should reproduce 8,450 canonical cell-line–drug-pair units across 26 PDAC cell lines and 325 unordered drug pairs. Additional dataset checks are included in the notebook.
 
 **Note:** For unseen-cell-line validation, expression preprocessing and PCA must be fitted using training cell lines only. The global PCA features created during dataset assembly must not be used as substitutes.
 
@@ -46,6 +44,4 @@ Check the `TRAINING_UNITS_PATH` and molecular-structure input paths in the exter
 
 ## Data availability
 
-Original datasets, large processed modelling tables and generated results are excluded from the public repository. The small supporting files needed for candidate ranking and molecular-structure mapping are provided in GitHub.
-
-Reproducing the reported results requires matching the original data releases, compound identifiers and preprocessing inputs.
+Original datasets, large processed modelling tables and generated results are excluded from the public repository. The small supporting files needed for candidate ranking and molecular-structure mapping are provided in GitHub. Reproducing the reported results requires matching the original data releases, compound identifiers and preprocessing inputs.
