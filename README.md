@@ -1,6 +1,6 @@
 # Machine learning for drug-combination modelling in pancreatic ductal adenocarcinoma
 
-**Master's thesis (2026) · University of Helsinki · Life Science Informatics**
+**Master's thesis (2026) · University of Helsinki · Life Science Informatics Master's programme**
 
 This repository contains the Python notebooks for my master's thesis on machine-learning prediction and prioritisation of drug combinations in pancreatic ductal adenocarcinoma (PDAC). The analyses cover a single-cell-line benchmark, multi-cell-line modelling, candidate ranking and evaluation against external experimental datasets.
 
