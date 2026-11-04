@@ -8,11 +8,9 @@ This repository contains the Python notebooks for my master's thesis on machine-
 
 The analyses were developed using Python 3.14.3 on Windows 11 (CPU). The required Python packages and their versions are listed in requirements.txt.
 
-Install the dependencies in your preferred Python environment and open the notebooks in Jupyter or VS Code. Check the input paths in each notebook before running.
-
 ## Notebooks
 
-Run each notebook from top to bottom. The order below follows the analysis workflow; the NCATS benchmark can also be run independently.
+Run each notebook from top to bottom. The order below follows the analysis workflow.
 
 | Order | Notebook | Purpose |
 |---|---|---|
@@ -27,7 +25,7 @@ Run each notebook from top to bottom. The order below follows the analysis workf
 
 ## Data and supporting files
 
-**Original experimental datasets and large processed modelling tables are not included** in this repository and are not downloaded automatically. Follow the [data-access and preprocessing guide](docs/DATA_ACCESS_AND_PREPROCESSING.md) to obtain the required source files and check their usage terms. Reproducing the reported results requires the corresponding data releases and mappings.
+Original experimental datasets and large processed modelling tables are not included in this repository and are not downloaded automatically. Follow the [data-access and preprocessing guide](docs/DATA_ACCESS_AND_PREPROCESSING.md) to obtain the required source files and check their usage terms. Reproducing the reported results requires the corresponding data releases and mappings.
 
 Notebook 2 generates these local modelling inputs:
 
